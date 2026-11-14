@@ -25,12 +25,12 @@ export const demoStudent = {
 export const demoDashboard = {
   attendance: { present: 12, late: 2, absent: 1, total: 15 },
   unsubmitted: [
-    { title: "책 낭독 영상", className: "초5 국어", count: 3, due: "11/16" },
-    { title: "영어 자기소개", className: "중1 영어", count: 5, due: "11/18" },
+    { title: "영어 동화 낭독", className: "초5 영어", count: 3, due: "11/16" },
+    { title: "My Weekend 스피킹", className: "중1 영어", count: 5, due: "11/18" },
   ],
   reviewPending: [
-    { student: "이하늘", title: "책 낭독 영상" },
-    { student: "박도윤", title: "영어 자기소개" },
+    { student: "이하늘", title: "영어 동화 낭독" },
+    { student: "박도윤", title: "My Weekend 스피킹" },
   ],
   aiUsage: [
     { model: "gemini-3.8-flash", used: 7, limit: 18 },
@@ -39,7 +39,7 @@ export const demoDashboard = {
 };
 
 export const demoAssignments = [
-  { title: "책 낭독 영상", due: "11월 16일", status: "제출 전" },
-  { title: "수학 풀이 설명", due: "11월 12일", status: "검수 대기" },
-  { title: "동시 암송", due: "11월 5일", status: "피드백 공개됨" },
+  { title: "영어 동화 낭독", due: "11월 16일", status: "제출 전" },
+  { title: "영어 자기소개 말하기", due: "11월 12일", status: "검수 대기" },
+  { title: "영어 노래 따라 부르기", due: "11월 5일", status: "피드백 공개됨" },
 ];
