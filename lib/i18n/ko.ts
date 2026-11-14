@@ -1,0 +1,57 @@
+/** 모든 UI 문구. 화면 코드에는 한국어 문자열을 직접 쓰지 않는다. */
+export const ko = {
+  app: {
+    name: "공부방 매니저",
+    tagline: "출결·과제 관리와 AI 영상 피드백을 한 곳에서",
+  },
+  common: {
+    email: "이메일",
+    password: "비밀번호",
+    submit: "확인",
+    logout: "로그아웃",
+    loading: "처리 중…",
+  },
+  auth: {
+    loginTitle: "로그인",
+    loginButton: "로그인",
+    loginFailed: "이메일 또는 비밀번호가 올바르지 않습니다.",
+    noAccountTeacher: "공부방을 처음 시작하시나요?",
+    goSignup: "선생님 가입하기",
+    goLogin: "이미 계정이 있으신가요? 로그인",
+    studentHint: "학생 계정은 선생님이 만들어 드립니다.",
+    signupTitle: "선생님 가입 (새 공부방 만들기)",
+    academyName: "공부방 이름",
+    displayName: "선생님 이름",
+    passwordRule: "비밀번호는 8자 이상이어야 합니다.",
+    signupButton: "가입하기",
+    signupDisabled: "현재 신규 가입이 닫혀 있습니다. 관리자에게 문의하세요.",
+    signupCheckEmail: "가입 확인 메일을 보냈습니다. 메일의 링크를 누른 뒤 로그인해 주세요.",
+    signupFailed: "가입에 실패했습니다. 잠시 후 다시 시도해 주세요.",
+    emailInUse: "이미 가입된 이메일입니다.",
+    invalidInput: "입력값을 확인해 주세요.",
+    confirmFailed: "인증 링크가 만료되었거나 올바르지 않습니다. 다시 로그인해 주세요.",
+    noProfileTitle: "계정 설정이 아직 끝나지 않았어요",
+    noProfileBody: "선생님께 학생 계정 연결을 요청하거나, 잠시 후 다시 로그인해 주세요.",
+  },
+  config: {
+    missingTitle: "환경 설정이 필요합니다",
+    missingBody: "Supabase 환경변수(NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY)가 설정되지 않았습니다. README 의 설치 안내를 확인하세요.",
+  },
+  teacher: {
+    nav: {
+      dashboard: "대시보드",
+      classes: "반 관리",
+      students: "학생 관리",
+      attendance: "출결",
+      assignments: "과제",
+      settings: "설정",
+    },
+    dashboardTitle: "오늘의 공부방",
+    comingSoon: "다음 단계에서 제공될 기능입니다.",
+  },
+  student: {
+    homeTitle: "내 과제",
+    greeting: (name: string) => `${name} 학생, 안녕하세요!`,
+    comingSoon: "과제 목록과 영상 제출은 곧 제공됩니다.",
+  },
+} as const;
