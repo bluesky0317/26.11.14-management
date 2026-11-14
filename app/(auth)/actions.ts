@@ -5,6 +5,7 @@ import { headers } from "next/headers";
 import { z } from "zod";
 import { createClient } from "@/lib/supabase/server";
 import { isTeacherSignupEnabled } from "@/lib/env";
+import { isDemoMode } from "@/lib/demo";
 import { safeNextPath, type UserRole } from "@/lib/auth/roles";
 import { ko } from "@/lib/i18n/ko";
 
@@ -79,6 +80,7 @@ export async function teacherSignupAction(_prev: FormState, formData: FormData):
 }
 
 export async function logoutAction() {
+  if (isDemoMode()) redirect("/");
   const supabase = await createClient();
   await supabase.auth.signOut();
   redirect("/login");

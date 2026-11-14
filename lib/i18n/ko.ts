@@ -33,9 +33,12 @@ export const ko = {
     noProfileTitle: "계정 설정이 아직 끝나지 않았어요",
     noProfileBody: "선생님께 학생 계정 연결을 요청하거나, 잠시 후 다시 로그인해 주세요.",
   },
-  config: {
-    missingTitle: "환경 설정이 필요합니다",
-    missingBody: "Supabase 환경변수(NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY)가 설정되지 않았습니다. README 의 설치 안내를 확인하세요.",
+  demo: {
+    badge: "체험 모드",
+    notice: "데이터베이스 연결 전이라 샘플 데이터로 보여드립니다. 저장되지 않습니다.",
+    asTeacher: "선생님 화면 둘러보기",
+    asStudent: "학생 화면 둘러보기",
+    home: "처음으로",
   },
   teacher: {
     nav: {
@@ -48,10 +51,20 @@ export const ko = {
     },
     dashboardTitle: "오늘의 공부방",
     comingSoon: "다음 단계에서 제공될 기능입니다.",
+    todayAttendance: "오늘 출결",
+    present: "출석",
+    late: "지각",
+    absent: "결석",
+    unsubmitted: "미제출 과제",
+    unsubmittedCount: (n: number) => `${n}명 미제출`,
+    dueOn: (d: string) => `마감 ${d}`,
+    reviewPending: "검수 대기 피드백",
+    aiUsageToday: "오늘의 AI 사용량",
   },
   student: {
     homeTitle: "내 과제",
     greeting: (name: string) => `${name} 학생, 안녕하세요!`,
     comingSoon: "과제 목록과 영상 제출은 곧 제공됩니다.",
+    dueOn: (d: string) => `마감 ${d}`,
   },
 } as const;

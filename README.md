@@ -4,6 +4,11 @@
 
 > 현재 진행 상태: **Phase 1** (프로젝트 셋업, DB 스키마/RLS, 인증, 역할 분기). 나머지 기능은 Phase 2~5에서 추가됩니다.
 
+## 체험 모드 (DB 없이 실행)
+Supabase 환경변수(`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`)가 **없으면** 자동으로 체험 모드가 됩니다.
+로그인 없이 샘플 데이터로 선생님/학생 화면을 볼 수 있고, 아무것도 저장되지 않습니다.
+환경변수를 넣고 다시 배포하면 실제 모드(로그인 + DB)로 바뀝니다.
+
 ## 기술 스택
 Next.js 15 (App Router) · TypeScript strict · Tailwind CSS v4 + shadcn/ui · Supabase (Auth/Postgres/Storage/RLS) · zod · Vitest · Playwright
 

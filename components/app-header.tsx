@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { logoutAction } from "@/app/(auth)/actions";
 import { ko } from "@/lib/i18n/ko";
+import { isDemoMode } from "@/lib/demo";
 
 export function AppHeader({
   displayName,
@@ -13,16 +14,25 @@ export function AppHeader({
   return (
     <header className="sticky top-0 z-10 border-b bg-background/95 backdrop-blur">
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3">
-        <Link href="/" className="font-semibold">
+        <Link href="/" className="flex items-center gap-2 font-semibold">
           {ko.app.name}
+          {isDemoMode() ? (
+            <span className="rounded-full bg-accent px-2 py-0.5 text-xs font-normal">{ko.demo.badge}</span>
+          ) : null}
         </Link>
         <div className="flex items-center gap-2 text-sm">
           <span className="hidden text-muted-foreground sm:inline">{displayName}</span>
-          <form action={logoutAction}>
-            <Button variant="ghost" size="sm">
-              {ko.common.logout}
+          {isDemoMode() ? (
+            <Button asChild variant="ghost" size="sm">
+              <Link href="/">{ko.demo.home}</Link>
             </Button>
-          </form>
+          ) : (
+            <form action={logoutAction}>
+              <Button variant="ghost" size="sm">
+                {ko.common.logout}
+              </Button>
+            </form>
+          )}
         </div>
       </div>
       {nav ? (
